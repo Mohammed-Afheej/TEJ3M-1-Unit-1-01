@@ -1,55 +1,18 @@
-# Prerequisites
-*.d
+ /*
+Mohammed Afheej
+Feb 18,2026
+It make the Arduino blink for one second then stop for 1 seconed.
+*/
 
-# Object files
-*.o
-*.ko
-*.obj
-*.elf
+void setup() { 
+    // initialize digital pin LED_BUILTIN as an output.
+    pinMode(LED_BUILTIN, OUTPUT); 
+} 
 
-# Linker output
-*.ilk
-*.map
-*.exp
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
-
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
-
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
-
-# Debug files
-*.dSYM/
-*.su
-*.idb
-*.pdb
-
-# Kernel Module Compile Results
-*.mod*
-*.cmd
-.tmp_versions/
-modules.order
-Module.symvers
-Mkfile.old
-dkms.conf
-
-# debug information files
-*.dwo
+// the loop function runs over and over again forever 
+void loop() { 
+        digitalWrite(LED_BUILTIN, HIGH);     // turn the LED on (HIGH is the voltage level)
+        delay(1000);                         // wait for a second
+        digitalWrite(LED_BUILTIN, LOW);      // turn the LED off by making the voltage LOW   
+        delay(1000);                        // wait for a second
+}  
